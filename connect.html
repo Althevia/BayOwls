@@ -92,6 +92,11 @@
   				button.link { 							background:none;border:none;cursor:pointer; }
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      
+     			show{ 
+  document.getElementById("comment").style.display="none";
+  document.getElementById(elementId).style.display="block";
+}
 	</style>
   
   <title> Connect </title>
@@ -122,7 +127,8 @@
             </form> 
         </div>
   </div>
-						
+  
+			
 	<script>																							 
       // Get the modal
     var modal = document.getElementById('myModal');
@@ -175,7 +181,18 @@
         </tr>
         <tr>
           <th> @jayalone: <br>I'M SO LONELY SEND HELP.  I PLAY LEAGUE ALL DAY EVERYDAY ADD ME!<br><br>
-          <button class="link">Comment</button>
+          
+          <button class="link" onclick="myFunction()">Comment</button> 			
+          <script>
+         function myFunction() {
+          	var x =
+          document.createElement("INPUT");
+          	x.setAttribute("type", "text");
+            x.setAttribute("size", "100%");
+            
+            document.body.appendChild(x);
+         }
+         </script>
           </th>
         </tr>
    	 </table>
@@ -185,3 +202,4 @@
      </p>
 </body>
 </html>
+

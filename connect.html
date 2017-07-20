@@ -91,32 +91,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </style>
-	
-	<script type="text/javascript">
-function createTable(num_rows, numcols)
-{
-    var num_rows = document.tablegen.rows.value;
-    var num_cols = document.tablegen.cols.value;
-    var theader = '<table>\n';
-    var tbody = '';
-
-    for( var i=0; i<num_rows;i++)
-    {
-        // create each row
-        tbody += '<tr>';
-
-    for( var j=0; j<num_cols;j++)
-    {
-    // closing row table
-    tbody += '</tr>\n';
-    }
-
-    // TO DO
-
-    return theader + tbody + tfooter;
-}
-</script>
-
   
   <title> Connect </title>
   
@@ -138,9 +112,10 @@ function createTable(num_rows, numcols)
           <span class="close">&times;</span>
 
             <form action="/action_page.php" name="tablegen">
-							<label>Rows: <input type="text" name="rows"/></label><br />
+						<!-- <label>Rows: <input type="text" name="rows"/></label><br /> -->
               Write text here<br>
-              <input size="120%" height="100%" type="myBtn" name="generate" onclick='createTable();'>
+             <!-- <input size="120%" height="100%" type="myBtn" name="generate" onclick='createTable();'> -->
+		  				<input size="120%" height="100%" type="text" name="message"> 
               <br><br>
               <input type="submit" value="Submit">
             </form> 

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<div style="font-family:fantasy;">
+<head>
+
+<div style="font-family:fantasy;text-align:center">
+
+      <title>Mrs. Jones</title>
+
+ 
+	<style>
+		
+	
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+    }
+    td, th {
+      border: 2px solid #008CBA;
+      text-align: left;
+      padding: 8px;
+    }
+    tr:nth-child(even) {
+      background-color: #cce5ff;
+    }
+    tr:nth-child(odd) {
+      background-color: #e6f2ff;
+    }
+    .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+    .button1 {
+      background-color: white;
+      color: black;
+      border: 2px solid #008CBA;
+      position: center;
+    }
+    .button1:hover {
+      background-color: #008CBA;
+      color: white;
+    }
+	.button5 {
+	      background-color: white;
+	      color: black;
+	      border: 2px solid #8FE5FF;
+	  }
+
+	  .button5:hover {
+	      background-color: #8FE5FF;
+	      color: white;
+	  }
+	</style>
+  </div>
+</head>
+<body>
+ 
+	<h1 style="padding-top:30px;">Mrs. Jones</h1>
+	
+
+	
+	
+	<div style="font-family:fantasy;">
+	<h2 style="clear:left; padding-left:30px;">Reviews</h2>
+	</div>
+	<div style="align:center; padding-left:30px; padding-right:30px;">
+		<table width="100%">
+			<tr>
+				<td><b>Anonymous: </b><br> </td>
+			</tr>
+			<tr>
+				<td><b>Anonymous: </b><br> <br></td>
+			</tr>
+			<tr>
+				<td><b>Anonymous: </b><br> </td>
+			</tr>
+			<tr>
+				<td><b>Anonymous: </b><br> </td>
+			</tr>
+			<tr>
+				<td><b>Anonymous: </b><br> </td>
+			</tr>
+		</table>

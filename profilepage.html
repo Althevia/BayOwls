@@ -41,9 +41,19 @@
 </head>
 <body>
 	<h1 style="text-align:center;">In'Spire</h1>
-  <img style="float:left; padding-left:30px; padding-bottom:15px;", width="25%", src="https://static1.squarespace.com/static/5494c048e4b0af099ee17eb8/t/569978ff40667a727ede0401/1452898559707/">
+  <img id="profpic", style="float:left; padding-left:30px; padding-bottom:15px;", width="25%", src="https://static1.squarespace.com/static/5494c048e4b0af099ee17eb8/t/569978ff40667a727ede0401/1452898559707/">
+
+  <script>
+  function myFunction() {
+      var url = prompt("Enter the url for the desired profile picture");
+      if (url != null) {
+          document.getElementById("profpic").src =url
+      }
+  }
+  </script>
+
 	<div style="clear:left; padding-left:81px;">
-		<button class="button button1">Change Profile Picture</button>
+		<button onclick="myFunction()", class="button button1">Change Profile Picture</button>
 	</div>
 	<a href="https://althevia.github.io/BayOwls/homepage.html"><div style="text-align:center;"><button class="button button5">Back to Homepage</button><br></div></a>
 </body>

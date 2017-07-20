@@ -161,38 +161,43 @@
       <table width="100%">
         <tr>
           <th> @aromart: <br>I love puppies and would like to have a friend that shares my interest in animals :)<br><br>
-          <button class="link">Comment</button></th>
+                    
+          <button class="link" onclick="Comment5()">Comment</button>
+		<p id="newComment5" style="font-size:85%; "> </p>
+        
         </tr>
         <tr>
           <th> @camthesmiths: <br> Please somebody be my friend<br><br>
-          <button class="link">Comment</button></th>
+                    
+          <button class="link" onclick="Comment4()">Comment</button>
+			<p id="newComment4" style="font-size:85%; "> </p>
         </tr>
         <tr>
           <th> @luisfashion:<br> My intersts are music and fashion but I'm open to talking about anything.<br><br>
-          <button class="link">Comment</button></th>
+                    
+        <button class="link" onclick="Comment3()">Comment</button>
+		<p id="newComment3" style="font-size:85%; "> </p>
+        
         </tr>
         <tr>
           <th> @saltyvane:<br> Hey, I would love to have a friend who doesn't ignore me. hmu <br><br>
-          <button class="link">Comment</button></th>
+                    
+          <button class="link" onclick="Comment2()">Comment</button>
+		<p id="newComment2" style="font-size:85%; "> </p>
+        
         </tr>
         <tr>
           <th> @annbiggerloner:<br> NO IM MORE LONELY THAN U. I NEED ME SOME FRIENDDSS.<br><br>
-          <button class="link">Comment</button> </th>
+                    
+        <button class="link" onclick="Comment1()">Comment</button>
+		<p id="newComment1" style="font-size:85%; "> </p>
+        
         </tr>
         <tr>
-          <th> @jayalone: <br>I'M SO LONELY SEND HELP.  I PLAY LEAGUE ALL DAY EVERYDAY ADD ME!<br><br>
+          <th>@jayalone: <br>I'M SO LONELY SEND HELP.  I PLAY LEAGUE ALL DAY EVERYDAY ADD ME!<br><br>
           
-          <button class="link" onclick="myFunction()">Comment</button> 			
-          <script>
-         function myFunction() {
-          	var x =
-          document.createElement("INPUT");
-          	x.setAttribute("type", "text");
-            x.setAttribute("size", "100%");
-            
-            document.body.appendChild(x);
-         }
-         </script>
+          <button class="link" onclick="Comment()">Comment</button>
+		<p id="newComment" style="font-size:85%; "> </p>
           </th>
         </tr>
    	 </table>
@@ -200,6 +205,62 @@
      <p align="center">
 	<a href="https://althevia.github.io/BayOwls/homepage.html"> <button class="button button2">Back to Homepage</button><br> </a>
      </p>
+     
+      <script>
+  	     function Comment() {
+         	var com = prompt("Write your comment:");
+            if (com != null) {
+            	document.getElementById("newComment").innerHTML = com
+            }
+           }
+      </script>
+      
+      <script>
+  	     function Comment1() {
+         	var com = prompt("Write your comment:");
+            if (com != null) {
+            	document.getElementById("newComment1").innerHTML = com
+            }
+           }
+      </script>
+      
+      <script>
+  	     function Comment2() {
+         	var com = prompt("Write your comment:");
+            if (com != null) {
+            	document.getElementById("newComment2").innerHTML = com
+            }
+           }
+      </script>
+      
+      <script>
+  	     function Comment3() {
+         	var com = prompt("Write your comment:");
+            if (com != null) {
+            	document.getElementById("newComment3").innerHTML = com
+            }
+           }
+      </script>
+      
+      <script>
+  	     function Comment4() {
+         	var com = prompt("Write your comment:");
+            if (com != null) {
+            	document.getElementById("newComment4").innerHTML = com
+            }
+           }
+      </script>
+      
+      <script>
+  	     function Comment5() {
+         	var com = prompt("Write your comment:");
+            if (com != null) {
+            	document.getElementById("newComment5").innerHTML = com
+            }
+           }
+      </script>
+      
+          
+          
 </body>
 </html>
-

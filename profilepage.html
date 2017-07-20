@@ -32,22 +32,49 @@
 	      color: black;
 	      border: 2px solid #8FE5FF;
 	  }
-
 	  .button5:hover {
 	      background-color: #8FE5FF;
 	      color: white;
 	  }
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+    }
+    td, th {
+      border: 2px solid #008CBA;
+      text-align: left;
+      padding: 8px;
+    }
+    tr:nth-child(even) {
+      background-color: #cce5ff;
+    }
+    tr:nth-child(odd) {
+      background-color: #e6f2ff;
+    }
 	</style>
 </head>
 <body>
 	<h1 style="text-align:center; font-family:fantasy;">In'Spire</h1>
-  <img id="profpic", style="float:left; padding-left:30px; padding-bottom:15px;", width="25%", src="https://static1.squarespace.com/static/5494c048e4b0af099ee17eb8/t/569978ff40667a727ede0401/1452898559707/">
+  <img id="profpic", style="float:left; padding-left:30px; padding-bottom:15px; padding-right:30px;", width="25%", src="https://static1.squarespace.com/static/5494c048e4b0af099ee17eb8/t/569978ff40667a727ede0401/1452898559707/">
+
+  <table width="65%">
+    <tr>
+      <td><p id="mybio">This user hasn't written anything about themself!<p></td>
+    </tr>
+  </table>
+  <button onclick="UserBio()", class="button button1">Change Bio</button>
 
   <script>
   function myFunction() {
       var url = prompt("Enter the url for the desired profile picture");
       if (url != null) {
-          document.getElementById("profpic").src =url
+          document.getElementById("profpic").src=url
+      }
+  }
+  function UserBio() {
+      var bio = prompt("Write something about yourself!");
+      if (bio != null) {
+          document.getElementById("mybio").innerHTML=bio
       }
   }
   </script>

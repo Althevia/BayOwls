@@ -1,11 +1,65 @@
-<!DOCTYPE html>
-<html lang="en-US">
 
+
+
+<!DOCTYPE html>
+<html>
 <head>
-  <div style="text-align:center">
-	<title>Chatter Box</title>
+	<title>Chatterbox</title>
   <style>
-    .button {
+
+       table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+}
+      	td, th {
+			border: 2px solid #008CBA;
+      text-align: left;
+      padding-right:25px;
+			padding-left:25px;
+			padding-top:15px;
+			padding-bottom:0px;
+}
+      	tr:nth-child(even) {
+      background-color: #cce5ff;
+}
+     	 tr:nth-child(odd) {
+      background-color: #e6f2ff;
+}
+
+      	.modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+      	.modal-content {
+      background-color: #fefefe;
+      margin: 15% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+}
+      	.close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+}
+
+      .close:hover,
+      .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+}
+
+            .button {
       background-color: #4CAF50; /* Green */
       border: none;
       color: white;
@@ -20,52 +74,293 @@
       cursor: pointer;
   }
 
-  .button1 {
+  			.button1 {
       background-color: white;
       color: black;
       border: 2px solid #008CBA;
+    	position: center;
   }
 
-  .button1:hover {
+       .button1:hover {
       background-color: #008CBA;
       color: white;
   }
-.button2 {
-	      background-color: white;
-	      color: black;
-	      border: 2px solid #8FE5FF;
-	  }
+				.button2 {
+      background-color: white;
+      color: black;
+      border: 2px solid #8FE5FF;
+  }
+				.button2:hover {
+      background-color: #8FE5FF;
+      color: white;
 
-	  .button2:hover {
-	      background-color: #8FE5FF;
-	      color: white;
-	  }
+  }
+  				button.link {
+			background:none;
+			border:none;
+			cursor:pointer;
+			font-family: fantasy;
+			font-size: 100%;
+			padding-bottom:0px;
+	}
 
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-  </style>
-  </div>
+     			show{
+  document.getElementById("comment").style.display="none";
+  document.getElementById(elementId).style.display="block";
+}
+    table.center {
+      margin-left:auto;
+      margin-right:auto;
+    }
+	</style>
+
 </head>
-
-
 <body>
-<!-- // schools- list of schools, teachers, clubsjavascript:void(0)
-// events- sport games, dances, rallies
-// social issues- police brutality, discrimination, bullying, politics, gun violence
-// lgbtq- chat, connect
-// connect- friends, add friends
-// college help- questions, recomendations, about each college,
-// chatter box- chat
-// health ed- advice, questions  -->
-<div style="text-align:center"><div style="font-family:fantasy;"><div style="color:#008CBA;">
-	<h1> Chatter Box </h1></div>
-	<p> Chat with other users </p></div>
-    <button class="button button1">Chat Now</button><br>
-		<a href="https://althevia.github.io/BayOwls/homepage.html"> <button class="button button2">Back to Homepage</button><br> </a>
 
-    
+  <div class="w3-container">
+    <h1 style="text-align:center; color:#008CBA; font-family:fantasy;" >Chatterbox</h1>
+    <p style="font-size:100%; text-align:center; font-family:fantasy;">Talk about anything you want!</p>
+      <p align="center">
+        <button id="myBtn" class="button button1">Add a Post</button>
+      </p>
+
+        <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+
+            <form action="/action_page.php" method="get">
+              Write text here:<br>
+		  				<input size="145%" height="100%" type="text" name="message">
+
+              <br><br>
+              <input type="submit" value="Submit">
+            </form>
+        </div>
   </div>
 
+
+	<script>
+      // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+  </script>
+  <div style="text-align:center; padding-bottom:10px;">
+    <img width="50%", src="http://www.communitycatspodcast.com/wp-content/uploads/2014/11/BarnCat.jpg">
+  </div>
+      <table width="60%"; margin:"20px" class="center">
+        <tr>
+          <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="https://itsbobatime.com/wp-content/uploads/2017/04/04-04_ITSBOBATIME_IG-1.jpg">
+            @boba4life<br>SOOOOO CUTE <3333<br><br>
+        </tr>
+        <tr>
+          <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="https://d1wn0q81ehzw6k.cloudfront.net/additional/thul/media/0eaa14d11e8930f5?w=400&h=400">
+            @kittylover<br>OMG I WANT TEN<br><br>
+        </tr>
+        <tr>
+          <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/01/25/104239791-GettyImages-632317228.600x400.jpg?v=1485358053s">
+            @eres<br>It reminds me of puss in boots!<br><br>
+        </tr>
+        <tr>
+          <td>
+            <img id="pic", width="50",height="50" style="float:left; padding-right:20px;"  src="">
+            <b><p id="profname" style="font-size:85%;"> </p></b>
+            <b><p id="newComment" style="font-size:85%;"> </p></b>
+            <button class="link" onclick="Comment()" style="float:right;" id="bttn">Comment</button>
+          </td>
+        </tr>
+   	 </table><br><br><br>
+   </div>
+
+   <div style="text-align:center; padding-bottom:10px;">
+     <img width="50%", src="http://i0.kym-cdn.com/photos/images/facebook/001/219/379/09e.jpg">
+   </div>
+       <table width="60%"; margin:"20px" class="center">
+         <tr>
+           <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="https://itsbobatime.com/wp-content/uploads/2017/04/04-04_ITSBOBATIME_IG-1.jpg">
+             @boba4life<br>So true<3333<br><br>
+         </tr>
+         <tr>
+           <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="http://jonvilma.com/images/race-car-4.jpg">
+             @racecar<br>Gonna go tell my parents this<br><br>
+         </tr>
+         <tr>
+           <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="https://media0.giphy.com/media/CytQHnbgquUhi/200_s.gif">
+             @memelord<br><img width="90%" src="http://memesguy.com/wp-content/uploads/2017/05/you-cant-if-you-dont.jpg"><br><br>
+         </tr>
+         <tr>
+           <td>
+             <img id="pic1", width="50",height="50" style="float:left; padding-right:20px;"  src="">
+             <b><p id="profname1" style="font-size:85%;"> </p></b>
+             <b><p id="newComment1" style="font-size:85%;"> </p></b>
+             <button class="link" onclick="Comment1()" style="float:right;" id="bttn1">Comment</button>
+           </td>
+         </tr>
+    	 </table><br><br><br>
+    </div>
+
+    <div style="text-align:center; padding-bottom:10px;">
+      <img width="50%", src="https://3.bp.blogspot.com/-s9LtkLXjqkw/VqgU7hGxpDI/AAAAAAAAMno/VDEOVyCjvHQ/s640/QoR8Bv1S2SEqH6UcSJCA_Tea.jpg">
+    </div>
+        <table width="60%"; margin:"20px" class="center">
+          <tr>
+            <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="https://scontent.cdninstagram.com/t51.2885-15/s480x480/e35/13658814_1093638767377556_637496200_n.jpg?ig_cache_key=MTI5MjU2NzI3Mjg1MDQ2ODIyMQ%3D%3D.2">
+              @tealover<br>Nothing beats reading a book in the morning with a cup of tea!<br><br>
+          </tr>
+          <tr>
+            <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="https://s8.favim.com/610/151017/aesthetic-cup-dark-edit-Favim.com-3440849.jpg">
+              @comfy<br>Aesthetic af<br><br>
+          </tr>
+          <tr>
+            <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="https://c1.staticflickr.com/9/8543/8873908351_e8e1066656_b.jpg">
+              @soded<br>zzz BORING<br><br>
+          </tr>
+          <tr>
+            <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="https://d1wn0q81ehzw6k.cloudfront.net/additional/thul/media/0eaa14d11e8930f5?w=400&h=400">
+              @kittylover<br>soded is so blocked.<br><br>
+          </tr>
+          <tr>
+            <td>
+              <img id="pic2", width="50",height="50" style="float:left; padding-right:20px;"  src="">
+              <b><p id="profname2" style="font-size:85%;"> </p></b>
+              <b><p id="newComment2" style="font-size:85%;"> </p></b>
+              <button class="link" onclick="Comment2()" style="float:right;" id="bttn2">Comment</button>
+            </td>
+          </tr>
+     	 </table><br><br><br>
+     </div>
+
+     <div style="text-align:center; padding-bottom:10px;">
+       <img width="50%", src="https://i.ytimg.com/vi/c68TFn56Rq4/maxresdefault.jpg">
+     </div>
+         <table width="60%"; margin:"20px" class="center">
+           <tr>
+             <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="http://www.vangoghgallery.com/printsandposters/top-20/Starry-Night.jpg">
+               @vince<br>Wow, never thought of that<br><br>
+           </tr>
+           <tr>
+             <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="https://media0.giphy.com/media/CytQHnbgquUhi/200_s.gif">
+               @memelord<br><img src="https://68.media.tumblr.com/c7df88b223aebbb9d709aaa35f5873e4/tumblr_nreno0duJh1td0of9o1_500.gif"><br><br>
+           </tr>
+           <tr>
+             <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="http://jonvilma.com/images/race-car-4.jpg">
+               @racecar<br>Mind blown<br><br>
+           </tr>
+           <tr>
+             <td>
+               <img id="pic3", width="50",height="50" style="float:left; padding-right:20px;"  src="">
+               <b><p id="profname3" style="font-size:85%;"> </p></b>
+               <b><p id="newComment3" style="font-size:85%;"> </p></b>
+               <button class="link" onclick="Comment3()" style="float:right;" id="bttn3">Comment</button>
+             </td>
+           </tr>
+      	 </table><br><br><br>
+      </div>
+
+
+     <p align="center">
+	<a href="https://althevia.github.io/BayOwls/homepage.html"> <button class="button button2">Back to Homepage</button><br> </a>
+     </p>
+      <script>
+
+  	     function Comment() {
+         	var com = prompt("Write your comment:");
+            if (com != null) {
+            	document.getElementById("newComment").innerHTML = com
+              document.getElementById("bttn").innerHTML = ""
+              document.getElementById("profname").innerHTML = "@reallemonbits"
+              document.getElementById("pic").src = "https://static1.squarespace.com/static/5494c048e4b0af099ee17eb8/t/569978ff40667a727ede0401/1452898559707/"
+            }
+           }
+      </script>
+
+      <script>
+  	     function Comment1() {
+         	var com = prompt("Write your comment:");
+            if (com != null) {
+            	document.getElementById("newComment1").innerHTML = com
+              document.getElementById("bttn1").innerHTML = ""
+              document.getElementById("profname1").innerHTML = "@reallemonbits"
+              document.getElementById("pic1").src = "https://static1.squarespace.com/static/5494c048e4b0af099ee17eb8/t/569978ff40667a727ede0401/1452898559707/"
+            }
+           }
+      </script>
+
+      <script>
+  	     function Comment2() {
+         	var com = prompt("Write your comment:");
+            if (com != null) {
+            	document.getElementById("newComment2").innerHTML = com
+              document.getElementById("bttn2").innerHTML = ""
+              document.getElementById("profname2").innerHTML = "@reallemonbits"
+              document.getElementById("pic2").src = "https://static1.squarespace.com/static/5494c048e4b0af099ee17eb8/t/569978ff40667a727ede0401/1452898559707/"
+            }
+           }
+      </script>
+
+      <script>
+  	     function Comment3() {
+         	var com = prompt("Write your comment:");
+            if (com != null) {
+            	document.getElementById("newComment3").innerHTML = com
+              document.getElementById("bttn3").innerHTML = ""
+              document.getElementById("profname3").innerHTML = "@reallemonbits"
+              document.getElementById("pic3").src = "https://static1.squarespace.com/static/5494c048e4b0af099ee17eb8/t/569978ff40667a727ede0401/1452898559707/"
+            }
+           }
+      </script>
+
+      <script>
+  	     function Comment4() {
+         	var com = prompt("Write your comment:");
+            if (com != null) {
+            	document.getElementById("newComment4").innerHTML = com
+              document.getElementById("bttn").innerHTML = ""
+              document.getElementById("profname").innerHTML = "@reallemonbits"
+              document.getElementById("pic").src = "https://static1.squarespace.com/static/5494c048e4b0af099ee17eb8/t/569978ff40667a727ede0401/1452898559707/"
+            }
+           }
+      </script>
+
+      <script>
+  	     function Comment5() {
+         	var com = prompt("Write your comment:");
+            if (com != null) {
+            	document.getElementById("newComment5").innerHTML = com
+              document.getElementById("bttn").innerHTML = ""
+              document.getElementById("profname").innerHTML = "@reallemonbits"
+              document.getElementById("pic").src = "https://static1.squarespace.com/static/5494c048e4b0af099ee17eb8/t/569978ff40667a727ede0401/1452898559707/"
+            }
+           }
+      </script>
 
 </body>
-
-</html
+</html>

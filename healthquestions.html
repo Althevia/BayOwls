@@ -1,0 +1,276 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>College Questions</title>
+  <style>
+
+       table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+}
+      	td, th {
+			border: 2px solid #008CBA;
+      text-align: left;
+      padding-right:25px;
+			padding-left:25px;
+			padding-top:15px;
+			padding-bottom:0px;
+}
+      	tr:nth-child(even) {
+      background-color: #cce5ff;
+}
+     	 tr:nth-child(odd) {
+      background-color: #e6f2ff;
+}
+
+      	.modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+      	.modal-content {
+      background-color: #fefefe;
+      margin: 15% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+}
+      	.close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+}
+
+      .close:hover,
+      .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+}
+
+            .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer;
+  }
+
+  			.button1 {
+      background-color: white;
+      color: black;
+      border: 2px solid #008CBA;
+    	position: center;
+  }
+
+       .button1:hover {
+      background-color: #008CBA;
+      color: white;
+  }
+				.button2 {
+      background-color: white;
+      color: black;
+      border: 2px solid #8FE5FF;
+  }
+				.button2:hover {
+      background-color: #8FE5FF;
+      color: white;
+
+  }
+  				button.link {
+			background:none;
+			border:none;
+			cursor:pointer;
+			font-family: fantasy;
+			font-size: 100%;
+			padding-bottom:0px;
+	}
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+     			show{
+  document.getElementById("comment").style.display="none";
+  document.getElementById(elementId).style.display="block";
+}
+	</style>
+
+</head>
+<body>
+
+  <div class="w3-container">
+    <h1 style="text-align:center; color:#008CBA; font-family:fantasy;" >College Questions</h1>
+    <p style="font-size:100%; text-align:center; font-family:fantasy;">Ask anything you want about college!</p>
+      <p align="center">
+        <button id="myBtn" class="button button1">Add a Post</button>
+      </p>
+
+        <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+
+            <form action="/action_page.php" method="get">
+              Write text here:<br>
+		  				<input size="145%" height="100%" type="text" name="message">
+
+              <br><br>
+              <input type="submit" value="Submit">
+            </form>
+        </div>
+  </div>
+
+
+	<script>
+      // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+  </script>
+    <h2 style="font-family:fantasy;"> Posts </h2>
+      <table width="100%"; margin:"20px">
+        <tr>
+          <th>@boba4life<br>I weigh 132 pounds, what's a good goal on how heavy the dumbbells I lift should be?<br><br>
+
+          <button class="link" onclick="Comment5()">Comment</button>
+		<p id="newComment5" style="font-size:85%; "> </p>
+
+        </tr>
+        <tr>
+          <th>@vince<br>What is the best way to lose weight?<br><br>
+
+          <button class="link" onclick="Comment4()">Comment</button>
+			<p id="newComment4" style="font-size:85%; "> </p>
+        </tr>
+        <tr>
+          <th>@soded<br>idk what to eat! help pls<br><br>
+        <button class="link" onclick="Comment3()">Comment</button>
+        <p>Check the nutrition page...</p>
+		<p id="newComment3" style="font-size:85%; "> </p>
+
+        </tr>
+        <tr>
+          <th> Anonymous:<br>Should I have rest days or does that undo my efforts<br><br>
+
+          <button class="link" onclick="Comment2()">Comment</button>
+		<p id="newComment2" style="font-size:85%; "> </p>
+
+        </tr>
+        <tr>
+          <th> Anonymous:<br>How bad is second hand smoke?<br><br>
+
+        <button class="link" onclick="Comment1()">Comment</button>
+		<p id="newComment1" style="font-size:85%; "> </p>
+
+        </tr>
+        <tr>
+          <th>@partyyy: <br>How often do are drinking parties at UC Santa Cruz?<br><br>
+
+          <button class="link" onclick="Comment()">Comment</button>
+		<p id="newComment" style="font-size:85%; "> </p>
+          <p>You're in the wrong forum...</p>
+          </th>
+        </tr>
+   	 </table>
+
+     <p align="center">
+	<a href="https://althevia.github.io/BayOwls/homepage.html"> <button class="button button2">Back to Homepage</button><br> </a>
+     </p>
+
+      <script>
+  	     function Comment() {
+         	var com = prompt("Write your comment:");
+            if (com != null) {
+            	document.getElementById("newComment").innerHTML = com
+            }
+           }
+      </script>
+
+      <script>
+  	     function Comment1() {
+         	var com = prompt("Write your comment:");
+            if (com != null) {
+            	document.getElementById("newComment1").innerHTML = com
+            }
+           }
+      </script>
+
+      <script>
+  	     function Comment2() {
+         	var com = prompt("Write your comment:");
+            if (com != null) {
+            	document.getElementById("newComment2").innerHTML = com
+            }
+           }
+      </script>
+
+      <script>
+  	     function Comment3() {
+         	var com = prompt("Write your comment:");
+            if (com != null) {
+            	document.getElementById("newComment3").innerHTML = com
+            }
+           }
+      </script>
+
+      <script>
+  	     function Comment4() {
+         	var com = prompt("Write your comment:");
+            if (com != null) {
+            	document.getElementById("newComment4").innerHTML = com
+            }
+           }
+      </script>
+
+      <script>
+  	     function Comment5() {
+         	var com = prompt("Write your comment:");
+            if (com != null) {
+            	document.getElementById("newComment5").innerHTML = com
+            }
+           }
+      </script>
+
+</body>
+</html>

@@ -1,112 +1,141 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+  <title>Bay Owls Homepage</title>
+  <style>
+  .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 100px 100px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 15px;
+      margin: 15px 10px;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer;
+  }
 
-.button {
+  .button3 {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    padding: 100px 100px;
+    padding: 16px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 15px;
-    margin: 15px 10px;
+    font-size: 16px;
+    margin: 4px 2px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
 }
 
-.button1 {
-    background-color: white;
-    color: black;
-    border: 3px solid #008CBA;
-}
-
-.button1:hover {
-    background-color: #008CBA;
-    color: white;
-}
-
-.dropbtn {
-    background-color: #008CBA;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+  .button1 {
+      background-color: white;
+      color: black;
+      border: 3px solid #008CBA;
   }
 
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #008CBA;
-}
+  .button1:hover {
+      background-color: #008CBA;
+      color: white;
+  }
+  .button2 {
+  	      background-color: white;
+  	      color: black;
+  	      border: 2px solid #8FE5FF;
+  	  }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
+  	  .button2:hover {
+  	      background-color: #8FE5FF;
+  	      color: white;
+  	  }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #008CBA;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
+  .dropbtn {
+      background-color: #008CBA;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
+  .dropbtn:hover, .dropbtn:focus {
+      background-color: #008CBA;
+  }
 
-.dropdown-content a:hover {background-color: #008CBA}
+  .dropdown {
+      position: relative;
+      display: inline-block;
+  }
 
-.show {display:block;}
-</style>
-</head>
-<body>
-  <div style="text-align:center;">
-     <img width="10%", src="https://github.com/Althevia/BayOwls/blob/gh-pages/logo2.png?raw=true">
-	</div>
-	<br></br>
-	<br></br>
-	<br></br>
-<br></br>
-<div class="dropdown">
-<img id="myBtn" style = "position: absolute; left: 1200px; top:-200px; width:100px; height:100px;" class="dropbtn" src="https://static1.squarespace.com/static/5494c048e4b0af099ee17eb8/t/569978ff40667a727ede0401/1452898559707/" >
-  <div id="myDropdown" style = "position: absolute; left: 1000px; top:-175px;right:190px;" class="dropdown-content">
-    <a href="https://althevia.github.io/BayOwls/profilepage.html" style="font-family:fantasy;">Profile</a>
-    <a href="https://althevia.github.io/BayOwls/aboutus.html"style="font-family:fantasy;">About Us</a>
-    <a href="https://althevia.github.io/BayOwls/login.html"style="font-family:fantasy;">Log Out</a>
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #008CBA;
+      min-width: 160px;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+  .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+  }
+
+  .dropdown-content a:hover {background-color: #008CBA}
+
+  .show {display:block;}
+  </style>
+  </head>
+  <body>
+    <div style="text-align:center;">
+       <img width="10%", src="https://github.com/Althevia/BayOwls/blob/gh-pages/logo2.png?raw=true">
+  	</div>
+  	<br></br>
+  	<br></br>
+  	<br></br>
+  <br></br>
+  <div class="dropdown">
+  <img id="myBtn" style = "position: absolute; left: 1200px; top:-220px; width:100px; height:100px;" class="dropbtn" src="https://static1.squarespace.com/static/5494c048e4b0af099ee17eb8/t/569978ff40667a727ede0401/1452898559707/" >
+    <div id="myDropdown" style = "position: absolute; left: 1020px; top:-220px;right:190px;" class="dropdown-content">
+      <a href="https://althevia.github.io/BayOwls/profilepage.html" style="font-family:fantasy;">Profile</a>
+      <a href="https://althevia.github.io/BayOwls/login.html"style="font-family:fantasy;">Log Out</a>
+    </div>
   </div>
-</div>
 
-<script>
-// Get the button, and when the user clicks on it, execute myFunction
-document.getElementById("myBtn").onclick = function() {myFunction()};
+  <script>
+  // Get the button, and when the user clicks on it, execute myFunction
+  document.getElementById("myBtn").onclick = function() {myFunction()};
 
-/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-</script>
+  /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+  function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+  }
+  </script>
 
-</style>
+  </style>
+</body>
 </head>
-<body>
 
-<h1 style="color:#008CBA;font-family:fantasy;font-size: 300%; float:left;position: absolute; left: 10px; top:10px;">GOOD EVENING, IN'SPIRE!</h1>
-<h2 style="color:black;font-family:fantasy;font-size: 300%; position: absolute; left: 10px; top:75px;"> WHAT TOPIC WOULD YOU LIKE TO EXPLORE TODAY?</h2>
-<p style="clear-left;"></p>
-<a href="https://althevia.github.io/BayOwls/schools.html"><button class="button button1" style="position: absolute; top:180px; left:10px;">SCHOOLS</button></a>
-<a href="https://althevia.github.io/BayOwls/events.html"><button class="button button1" style="position: absolute; top:180px; left:310px;">EVENTS&FUNDRAISERS</button></a>
-<a href="https://althevia.github.io/BayOwls/socialissues.html"><button class="button button1" style="position: absolute; top:180px; left:715px;">SOCIAL ISSUES</button></a>
-<a href="https://althevia.github.io/BayOwls/lgbtq.html"><button class="button button1" style="position: absolute; top:180px; left:1060px;">LGBTQ</button></a>
-<a href="https://althevia.github.io/BayOwls/connect.html"><button class="button button1" style="position: absolute; top:430px; left:10px;">CONNECT</button></a>
-<a href="https://althevia.github.io/BayOwls/collegehelp.html"><button class="button button1" style="position: absolute; top:430px; left:310px;">COLLEGE HELP</button></a>
-<a href="https://althevia.github.io/BayOwls/chatterbox.html"><button class="button button1" style="position: absolute; top:430px; left:650px;">CHATTER BOX</button></a>
-<a href="https://althevia.github.io/BayOwls/healthcoach.html"><button class="button button1" style="position: absolute; top:430px; left:985px;"> HEALTH COACH </button></a>
+<body>
+  <h1 style="color:#008CBA;font-family:fantasy;font-size: 300%; float:left;position: absolute; left: 10px; top:10px;">GOOD EVENING, IN'SPIRE!</h1>
+  <h2 style="color:black;font-family:fantasy;font-size: 300%; position: absolute; left: 10px; top:75px;"> WHAT TOPIC WOULD YOU LIKE TO EXPLORE TODAY?</h2>
+  <p style="clear-left;"></p>
+  <a href="https://althevia.github.io/BayOwls/schools.html"><button class="button button1" style="position: absolute; top:180px; left:10px;">SCHOOLS</button></a>
+  <a href="https://althevia.github.io/BayOwls/events.html"><button class="button button1" style="position: absolute; top:180px; left:310px;">EVENTS&FUNDRAISERS</button></a>
+  <a href="https://althevia.github.io/BayOwls/socialissues.html"><button class="button button1" style="position: absolute; top:180px; left:715px;">SOCIAL ISSUES</button></a>
+  <a href="https://althevia.github.io/BayOwls/lgbtq.html"><button class="button button1" style="position: absolute; top:180px; left:1060px;">LGBTQ</button></a>
+  <a href="https://althevia.github.io/BayOwls/connect.html"><button class="button button1" style="position: absolute; top:430px; left:10px;">CONNECT</button></a>
+  <a href="https://althevia.github.io/BayOwls/collegehelp.html"><button class="button button1" style="position: absolute; top:430px; left:310px;">COLLEGE HELP</button></a>
+  <a href="https://althevia.github.io/BayOwls/chatterbox.html"><button class="button button1" style="position: absolute; top:430px; left:650px;">CHATTER BOX</button></a>
+  <a href="https://althevia.github.io/BayOwls/healthcoach.html"><button class="button button1" style="position: absolute; top:430px; left:985px;"> HEALTH COACH </button></a>
+
+  <a href="https://althevia.github.io/BayOwls/aboutus.html"> <button class="button3 button2" style="position: absolute; top:700px; left:610px;">About Us</button><br> </a>
+</body>
+</html>

@@ -66,6 +66,53 @@
 	<p><b>Phone Number: </b> (415) 759-2700</p>
 	<p><b>Mascot: </b>Mustangs</p>
 	
+	  <div style="text-align:left;"><button class="button button1" onclick="Rate()">Rate School</button><br></div>
+
+  <script>
+  var ratetimes = 0
+  function Rate() {
+    if (ratetimes == 0) {
+     var star = prompt("Rate the school on a scale of 1-5 stars (whole numbers only)");
+       if (star != null) {
+         if (star != 1) {
+           if (star != 2) {
+             if (star != 3) {
+               if (star != 4) {
+                 if (star != 5) {
+                   alert("Incorrect input.");
+                 }
+               }
+             }
+           }
+         }
+       }
+     }
+     if (star == 1) {
+       alert("Successfully rated school");
+       ratetimes = 1
+     }
+     if (star == 2) {
+       alert("Successfully rated school");
+       ratetimes = 1
+     }
+     if (star == 3) {
+       alert("Successfully rated school");
+       ratetimes = 1
+     }
+     if (star == 4) {
+       alert("Successfully rated school");
+       ratetimes = 1
+     }
+     if (star == 5) {
+       alert("Successfully rated school");
+       ratetimes = 1
+     }
+     else {
+       alert("You can only rate a school once");
+     }
+    }
+  </script>
+	
 	<div style="font-family:fantasy;">
 	<h2 style="clear:left; padding-left:30px;">Reviews</h2>
 	</div>

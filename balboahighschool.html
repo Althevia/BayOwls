@@ -64,7 +64,54 @@
 	<div style="font-family:arial"><p><b>Rating: </b><img width="120", height="30", src="http://css-stars.com/wp-content/uploads/2013/12/4-stars.jpg"></p>
 	<p><b>Location: </b>1000 Cayuga Ave, San Francisco, CA 94112</p>
 	<p><b>Phone Number: </b>(415) 469-4090</p>
-		<p><b>Mascot: </b>Buccaneer</p></div>
+	<p><b>Mascot: </b>Buccaneer</p></div>
+	
+	<div style="text-align:left;"><button class="button button1" onclick="Rate()">Rate School</button><br></div>
+
+  <script>
+  var ratetimes = 0
+  function Rate() {
+    if (ratetimes == 0) {
+     var star = prompt("Rate the school on a scale of 1-5 stars (whole numbers only)");
+       if (star != null) {
+         if (star != 1) {
+           if (star != 2) {
+             if (star != 3) {
+               if (star != 4) {
+                 if (star != 5) {
+                   alert("Incorrect input.");
+                 }
+               }
+             }
+           }
+         }
+       }
+     }
+     if (star == 1) {
+       alert("Successfully rated school");
+       ratetimes = 1
+     }
+     if (star == 2) {
+       alert("Successfully rated school");
+       ratetimes = 1
+     }
+     if (star == 3) {
+       alert("Successfully rated school");
+       ratetimes = 1
+     }
+     if (star == 4) {
+       alert("Successfully rated school");
+       ratetimes = 1
+     }
+     if (star == 5) {
+       alert("Successfully rated school");
+       ratetimes = 1
+     }
+     else {
+       alert("You can only rate a school once");
+     }
+    }
+  </script>
 	
 	<div style="font-family:fantasy;">
 	<h2 style="clear:left; padding-left:30px;">Reviews</h2>

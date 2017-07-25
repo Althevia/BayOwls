@@ -65,12 +65,7 @@
   <button onclick="UserBio()", class="button button1">Change Bio</button>
 
   <script>
-  function myFunction() {
-      var url = prompt("Enter the url for the desired profile picture");
-      if (url != null) {
-          document.getElementById("profpic").src=url
-      }
-  }
+
   function UserBio() {
       var bio = prompt("Write something about yourself!");
       if (bio != null) {
@@ -80,8 +75,10 @@
   </script>
 
 	<div style="clear:left; padding-left:81px;">
-		<button onclick="myFunction()", class="button button1">Change Profile Picture</button>
+  		<label for="files" class="button button1" style="font-family:arial">Change Profile Picture</label>
+ 		 <input id="files" style="visibility:hidden;" type="file">
 	</div>
+    
 	<a href="https://althevia.github.io/BayOwls/homepage.html"><div style="text-align:center;"><button class="button button5">Back to Homepage</button><br></div></a>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -114,60 +115,19 @@
 <body>
 
   <div class="w3-container">
-    <h1 style="text-align:center; color:#008CBA; font-family:fantasy;" ><font size="10">College Questions</font></h1>
-    <p style="font-size:100%; text-align:center; font-family:fantasy;"><font size="5">Ask anything you want about college!</font></p>
-      <p align="center">
-        <button id="myBtn" class="button button1">Add a Post</button>
-      </p>
-
-        <!-- The Modal -->
-      <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-
-            <form action="/action_page.php" method="get">
-              Write text here:<br>
-		  				<input size="145%" height="100%" type="text" name="message">
-
-              <br><br>
-              <input type="submit" value="Submit">
-            </form>
-        </div>
-  </div>
-
-
-	<script>
-      // Get the modal
-    var modal = document.getElementById('myModal');
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on the button, open the modal
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
+    <h1 style="text-align:center; color:#008CBA; font-family:fantasy;" >College Questions</h1>
+    <p style="font-size:100%; text-align:center; font-family:fantasy;">Ask anything you want about college!</p>
+    <p align="center">
+      <button id="postButton", onclick="addPost()", class="button button1">Add a Post</button>
+    </p>
 
   </script>
     <h2 style="font-family:fantasy;"> Posts </h2>
       <table width="100%"; margin:"20px">
+        <tr id="tablerow", style="display:none;">
+          <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="https://static1.squarespace.com/static/5494c048e4b0af099ee17eb8/t/569978ff40667a727ede0401/1452898559707/"><p style="font-size:95%;">@reallemonbits</p><p style="font-size:95%;", id="newpost"></p> <button class="link" onclick="Comment6()">Comment</button>
+            <p id="newComment6" style="font-size:85%; "> </th>
+        </tr>
         <tr>
           <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="https://s7.favim.com/orig/150630/aesthetic-alternative-cd-dark-Favim.com-2873894.jpg"> @helpme: <br>Can I change my major later in college?<br><br>
 
@@ -217,6 +177,13 @@
      </p>
 
       <script>
+        function addPost() {
+          var text = prompt("Write what you want to post!");
+          if (text != null) {
+              document.getElementById("newpost").innerHTML=text
+              document.getElementById("tablerow").style.display="table-row"
+          }
+        }
   	     function Comment() {
          	var com = prompt("Write your comment:");
             if (com != null) {
@@ -268,6 +235,12 @@
             	document.getElementById("newComment5").innerHTML = com
             }
            }
+           function Comment6() {
+            var com = prompt("Write your comment:");
+              if (com != null) {
+                document.getElementById("newComment6").innerHTML = com
+              }
+             }
       </script>
 
 </body>

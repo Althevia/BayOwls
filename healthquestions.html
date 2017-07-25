@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -116,75 +117,37 @@
 <body>
 
   <div class="w3-container">
+    <div style="text-align:center;">
+      <a href ="https://althevia.github.io/BayOwls/homepage.html"><img width="10%", src="https://github.com/Althevia/BayOwls/blob/gh-pages/logo2.png?raw=true"></a>
+    </div>
     <h1 style="text-align:center; color:#008CBA; font-family:fantasy;" ><font size="10">Health Questions</font></h1>
     <p style="font-size:100%; text-align:center; font-family:fantasy;"><font size="5">Ask anything you want about health!</font></p>
-      <p align="center">
-        <button id="myBtn" class="button button1">Add a Post</button>
-      </p>
-
-        <!-- The Modal -->
-      <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-
-            <form action="/action_page.php" method="get">
-              Write text here:<br>
-		  				<input size="145%" height="100%" type="text" name="message">
-
-              <br><br>
-              <input type="submit" value="Submit">
-            </form>
-        </div>
-  </div>
+    <p align="center">
+      <button id="postButton", onclick="addPost()", class="button button1">Add a Post</button>
+    </p>
 
 
-	<script>
-      // Get the modal
-    var modal = document.getElementById('myModal');
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on the button, open the modal
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-
-  </script>
     <h2 style="font-family:fantasy;"> Posts </h2>
       <table width="100%"; margin:"20px">
+        <tr id="tablerow", style="display:none;">
+          <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="https://static1.squarespace.com/static/5494c048e4b0af099ee17eb8/t/569978ff40667a727ede0401/1452898559707/"><p style="font-size:95%;">@reallemonbits</p><p style="font-size:95%;", id="newpost"></p> <button class="link" onclick="Comment6()">Comment</button>
+          <p id="newComment6" style="font-size:85%; "> </th>
+        </tr>
         <tr>
-          <th>@boba4life<br>I weigh 132 pounds, what's a good goal on how heavy the dumbbells I lift should be?<br><br>
+          <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="https://itsbobatime.com/wp-content/uploads/2017/04/04-04_ITSBOBATIME_IG-1.jpg">@boba4life<br>I weigh 132 pounds, what's a good goal on how heavy the dumbbells I lift should be?<br><br>
 
           <button class="link" onclick="Comment5()">Comment</button>
 		<p id="newComment5" style="font-size:85%; "> </p>
 
         </tr>
         <tr>
-          <th>@vince<br>What is the best way to lose weight?<br><br>
+          <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="http://www.vangoghgallery.com/printsandposters/top-20/Starry-Night.jpg">@vince<br>What is the best way to lose weight?<br><br>
 
           <button class="link" onclick="Comment4()">Comment</button>
 			<p id="newComment4" style="font-size:85%; "> </p>
         </tr>
         <tr>
-          <th>@soded<br>idk what to eat! help pls<br><br>
+          <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="https://c1.staticflickr.com/9/8543/8873908351_e8e1066656_b.jpg">@soded<br>idk what to eat! help pls<br><br>
         <button class="link" onclick="Comment3()">Comment</button>
         <p>Check the nutrition page...</p>
 		<p id="newComment3" style="font-size:85%; "> </p>
@@ -205,7 +168,7 @@
 
         </tr>
         <tr>
-          <th>@partyyy: <br>How often do are drinking parties at UC Santa Cruz?<br><br>
+          <th><img width="50",height="50" style="float:left; padding-right:20px;"  src="https://www.eatrightontario.ca/EatRightOntario/media/Website-images-resized/Alcohol-v-2-resized.jpg">@partyyy: <br>How often do are drinking parties at UC Santa Cruz?<br><br>
 
           <button class="link" onclick="Comment()">Comment</button>
 		<p id="newComment" style="font-size:85%; "> </p>
@@ -219,6 +182,13 @@
      </p>
 
       <script>
+      function addPost() {
+        var text = prompt("Write what you want to post!");
+        if (text != null) {
+            document.getElementById("newpost").innerHTML=text
+            document.getElementById("tablerow").style.display="table-row"
+        }
+      }
   	     function Comment() {
          	var com = prompt("Write your comment:");
             if (com != null) {
@@ -268,6 +238,12 @@
          	var com = prompt("Write your comment:");
             if (com != null) {
             	document.getElementById("newComment5").innerHTML = com
+            }
+           }
+        function Comment6() {
+          var com = prompt("Write your comment:");
+            if (com != null) {
+              document.getElementById("newComment6").innerHTML = com
             }
            }
       </script>
